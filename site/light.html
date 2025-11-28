@@ -116,9 +116,10 @@ input[type="radio"]:checked + .void + .buttons > .button[for$="-off"]
     </style>
 </head>
 <body>
+    <form action="/set_led_states" method="POST">
     <div class="ledCard" id="red">
-        <input type="radio" id="red-on" name="red-state" class="led-state-input">
-        <input type="radio" id="red-off" name="red-state" class="led-state-input" checked>
+        <input type="radio" id="red-on" name="red-state" class="led-state-input" value="1">
+        <input type="radio" id="red-off" name="red-state" class="led-state-input" value="0" checked>
         <div class="void"></div>
         <div class="buttons">
             <label for="red-on" class="button">ON</label>
@@ -126,8 +127,8 @@ input[type="radio"]:checked + .void + .buttons > .button[for$="-off"]
         </div>
     </div>
     <div class="ledCard" id="blue">
-        <input type="radio" id="blue-on" name="blue-state" class="led-state-input">
-        <input type="radio" id="blue-off" name="blue-state" class="led-state-input" checked>
+        <input type="radio" id="blue-on" name="blue-state" class="led-state-input" value="1">
+        <input type="radio" id="blue-off" name="blue-state" class="led-state-input" value="0" checked>
         <div class="void"></div>
         <div class="buttons">
             <label for="blue-on" class="button">ON</label>
@@ -135,8 +136,8 @@ input[type="radio"]:checked + .void + .buttons > .button[for$="-off"]
         </div>
     </div>
     <div class="ledCard" id="green">
-        <input type="radio" id="green-on" name="green-state" class="led-state-input">
-        <input type="radio" id="green-off" name="green-state" class="led-state-input" checked>
+        <input type="radio" id="green-on" name="green-state" class="led-state-input" value="1">
+        <input type="radio" id="green-off" name="green-state" class="led-state-input" value="0" checked>
         <div class="void"></div>
         <div class="buttons">
             <label for="green-on" class="button">ON</label>
@@ -144,13 +145,15 @@ input[type="radio"]:checked + .void + .buttons > .button[for$="-off"]
         </div>
     </div>
     <div class="ledCard" id="yellow">
-        <input type="radio" id="yellow-on" name="yellow-state" class="led-state-input">
-        <input type="radio" id="yellow-off" name="yellow-state" class="led-state-input" checked>
+        <input type="radio" id="yellow-on" name="yellow-state" class="led-state-input" value="1">
+        <input type="radio" id="yellow-off" name="yellow-state" class="led-state-input" value="0" checked>
         <div class="void"></div>
         <div class="buttons">
             <label for="yellow-on" class="button">ON</label>
             <label for="yellow-off" class="button">OFF</label>
         </div>
     </div>
+
+    </form>
 </body>
 </html>
