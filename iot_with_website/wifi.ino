@@ -39,39 +39,24 @@ void handleNotFound() {
 }
 
 
-// --- 3. The New POST Handler Function ---
-// void handlePost() {
-//   // Check if any arguments were sent (should be 4, one for each color)
-//   if (server.args() > 0) {
-//     for (int i = 0; i < server.args(); i++) {
-//       String argName = server.argName(i);
-//       int state = server.arg(i).toInt();  // "1" for ON, "0" for OFF
-
-//       // Use the helper function defined in LedControl.ino
-//       setLedState(argName.c_str(), state);
-//     }
-//   }
-
-//   // Send a redirect to load the main page again after processing the command
-//   server.sendHeader("Location", "/");
-//   server.send(302, "text/plain", "OK");
-// }
-
-
 
 // --- handleRoot (HTML generation) ---
 void handleRoot() {
 if(server.hasArg("red-state")){
-    server.arg("red-state").toInt();
+    int R_state = server.arg("red-state").toInt();
+    changeRedState(R_state);
   }
   if(server.hasArg("blue-state")){
-    server.arg("blue-state").toInt();
+    int B_state = server.arg("blue-state").toInt();
+    changeBlueState(B_state);
   }
   if(server.hasArg("green-state")){
-    server.arg("green-state").toInt();
+    int G_state = server.arg("green-state").toInt();
+    changeGreenState(G_state);
   }
   if(server.hasArg("yellow-state")){
-    server.arg("yellow-state").toInt();
+    int Y_state = server.arg("yellow-state").toInt();
+    changeYellowState(Y_state);
   }
   String html = "";
   String checkedOn;  

@@ -1,16 +1,17 @@
-const int redL = 1;
-const int blueL = 2;
-const int greenL = 3;
-const int yellowL = 4;
+const int redL = 5;
+const int blueL = 4;
+const int greenL = 0;
+const int yellowL = 2;
 
-int redState = LOW;
-int blueState = LOW;
-int greenState = LOW;
-int yellowState = LOW;
+int redState = 0;
+int blueState = 0;
+int greenState = 0;
+int yellowState = 0;
 
 void setup() {
   // put your setup code here, to run once:
   wifi_setup();
+  led_setup();
 }
 
 void loop() {
